@@ -1,0 +1,23 @@
+
+<div class="container">
+  <h3 class="white small-heading" ng-class="{'fade-down' : !loading, 'hidden' : loading}">Drag för att positionera bilden, {{user.first_name}}!</h3>
+  <canvas id="canvas" ng-class="{'zoomIn' : !loading, 'hidden' : loading}">Sorry, your browser doesn't support Canvas. Fool.</canvas>
+  <div ng-if="user.permissions.data[0].photo_upload">  
+    <div class="cta" ng-if="user" ng-class="{'fade-down' : !loading, 'hidden' : loading}">
+      <button class="button btn inline-block" ng-click="checkAlbums()" href="#">Klar! Ladda upp på facebook</button>
+      <a href="#" ng-click="uploadImage()" class="small block">...Nähädu! Jag vill faktiskt ladda hem bilden!</a>
+    </div>
+  </div>
+  <div ng-if="!user.permissions.data[0].photo_upload">  
+    <div class="cta" ng-if="user" ng-class="{'fade-down' : !loading, 'hidden' : loading}">
+      <button class="button btn inline-block" ng-click="uploadImage()" href="#">Klar! Ladda ner bilden</button>
+    </div>
+  </div>
+</div>
+<div class="spinner-container">
+  <div ng-show="loading" class="spinner fade-down">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+  </div>
+</div>
+<div ex-error></div>
