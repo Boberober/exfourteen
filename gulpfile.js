@@ -55,4 +55,6 @@ gulp.task('watch', function () {
     });
 });
 
+gulp.task('build', ['sass', 'scripts']);
+
 gulp.task('default', ['sass', 'watch']);
