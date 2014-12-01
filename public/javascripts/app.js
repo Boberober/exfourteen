@@ -1,4 +1,4 @@
-var facebookID = '644745582229859';
+var facebookID = 'FACBOOK_APP_ID_HERE';
 
 var app = angular.module('ex14', [
   'ngRoute',
