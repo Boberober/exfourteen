@@ -7,6 +7,7 @@ A tiny app I made for a graduating class of [Graphic Design and communication](h
 
 ## Installation
 #### Make sure you have [node](http://nodejs.org/) and npm installed
+#### Create a facebook app, and add the App ID to public/javascripts/app.js
 
 Clone the repo and install:
 ```sh
